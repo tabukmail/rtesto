@@ -13,9 +13,9 @@ library(xts)
 library(htmltools)
 library(dygraphs)
 
-stockID<-"LK"
+stockID<-"DBK"
 stdata <- getSymbols(stockID, auto.assign = FALSE)
-aa<-chartSeries(stdata, subset = '20100401/20201006', type = 'bars', theme = chartTheme("black", up.col='green', down.col='red'),
+aa<-chartSeries(stdata, subset = '20100401/20201212', type = 'bars', theme = chartTheme("black", up.col='green', down.col='red'),
                 TA = c(addADX(), addMACD(), addSMI(), addEVWMA(), addRSI(), addSMA()))
 
 
